@@ -1,0 +1,157 @@
+/* importando fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --first-color: #1A1A1D;
+    --second-color: #ECEFCA;
+    --third-color: #22D4FD;
+    --hover-color:#272727;
+
+    --first-font: 'Krona One', sans-serif;
+    --second-font: 'Montserrat', sans-serif;
+}
+
+* { /* configuração de reset de CSS*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--first-color);
+    color: var(--second-color);
+    /* height: 100vh; ocupa 100% da tela */
+    box-sizing: border-box; /* faz com que as classes filhas não saiam da classe principal (pai) */
+
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+}
+
+.menu-header {
+    display: flex;
+    gap: 80px;
+}
+
+.menu-link {
+    font-family: var(--second-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--third-color);
+    text-decoration: none;
+}
+
+.apresentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 15%;
+    gap: 82px;
+}
+
+.container-apresentation {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.high-text {
+    font-family: var(--first-font);
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.marked-text {
+    color: var(--third-color);
+}
+
+.about-text {
+    font-size: 1.5rem;
+    font-family: var(--second-font);
+    font-weight: 400;
+}
+
+.container-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentation-links {
+    font-family: var(--first-font);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.editing-link {
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--third-color);
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 21.5px 0px; /* primeiro valor - eixo vertical, segundo valor - eixo horizontal*/
+    text-decoration: none; /* tirando as decorações que há no texto */
+    color: var(--second-color);
+    font-family: var(--second-font);
+    font-weight: 600;
+}
+
+hr {
+    border: 1px solid var(--hover-color);
+}
+
+.editing-link:hover {
+    background-color: var(--hover-color);
+}
+
+.editing-link img {
+    height: 33px; 
+    width: 32px;
+}
+
+img {
+    border-radius: 15px;
+    width: 448px;
+    height: 500px;
+}
+
+.image-profile {
+    width: 50%;
+}
+
+.baseboard {
+    background-color: var(--third-color);
+    color: var(--first-color);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 10%;
+    }
+
+    .menu-header {
+        justify-content: center;
+    }
+
+    .apresentation {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .container-apresentation {
+        width: auto;
+    }
+}
